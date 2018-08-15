@@ -1,0 +1,196 @@
+/*
+ * Ruby UI Version 2018.08.13
+ * Copyright 2018 Anthony Provenza
+ * ALL RIGHTS RESERVED
+*/
+
+/* Color Scheme */
+/* todo: Create color scheme */
+$default_font_color: rgba(0, 0, 0, 0.87);
+$default_border_color : rgba(34, 36, 38, 0.15);
+
+$red          : #DB2828;
+$orange       : #F2711C;
+$yellow       : #FBBD08;
+$olive        : #8D9E13;
+$green        : #21bA45;
+$teal         : #00B5AD;
+$blue         : #2185D0;
+$violet       : #6435C9;
+$purple       : #A333C8;
+$pink         : #E03997;
+$brown        : #A5673F;
+$grey         : #767676;
+$black        : #1B1C1D;
+$primary_color: $blue;
+
+@mixin core_colors {
+    &.red {
+        color: $red;
+    }
+    &.orange {
+        color: $orange;
+    }
+    &.yellow {
+        color: $yellow;
+    }
+    &.olive {
+        color: $olive;
+    }
+    &.green {
+        color: $green;
+    }
+    &.teal {
+        color: $teal;
+    }
+    &.blue {
+        color: $blue;
+    }
+    &.violet {
+        color: $violet;
+    }
+    &.purple {
+        color: $purple;
+    }
+    &.pink {
+        color: $pink;
+    }
+    &.brown {
+        color: $brown;
+    }
+    &.grey {
+        color: $grey;
+    }
+}
+
+
+/* Reset */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+  
+/* HTML5 display-role reset for older browsers */
+  
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+  
+body {
+    line-height: 1;
+}
+  
+ol, ul {
+    list-style: none;
+}
+  
+blockquote, q {
+    quotes: none;
+}
+  
+blockquote {
+    &:before, &:after {
+        content: '';
+        content: none; 
+    } 
+}
+  
+q {
+    &:before, &:after {
+        content: '';
+        content: none;
+    }
+}
+  
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+body {
+    font-family: sans-serif;
+    color: $default_font_color;
+}
+
+a:hover, button:hover {
+    cursor: pointer;
+}
+
+/* Menu */
+@mixin nav_item {
+    float: left;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 1.2em;
+    border: 0px solid $default_border_color;
+    background-color: #fff;
+    &.active {
+        background-color: darken(#fff, 6%);
+    }
+    &:not(div):not(span) {
+        &:not(.header):not(.active):hover {
+            background-color: darken(#fff, 3%);
+        }
+    }
+    
+    @include core_colors();
+
+}
+
+nav.ruby {
+    height: 50px;
+    border: 1px solid $default_border_color;
+    border-radius: 4px;
+    &:not(.no-shadow) {
+        box-shadow: 0px 1px 2px 0 rgba(34, 36, 38, 0.15);
+    }
+}
+
+nav.ruby > * {
+    &.header {
+        font-weight: 700;
+    }
+    &:not(.right) {
+        @include nav_item();
+
+        &:not(.no-border):not(:first-child) {
+            border-left-width: 1px;
+        }
+        &:not(.no-border):last-of-type {
+            border-right-width: 1px;
+        }
+
+    }
+    &.right {
+        float: right;
+    }
+    &.right > * {
+        @include nav_item();
+
+        &:not(.no-border):first-child {
+            border-left-width: 1px;
+        }
+        &:not(.no-border):not(last-child) {
+            border-right-width: 1px;
+        }
+    }
+}
+
+/* Buttons */
+button.ruby {
+    padding: 0.8em 1.5em;
+    color: rgba(0, 0, 0, 0.6);
+    background-color: rgb(224, 225, 226);
+    border-radius: 0.3em;
+    outline: none;
+    border-width: 0;
+    font-weight: 700;
+}

@@ -1,0 +1,154 @@
+/*
+ * Ruby UI Version 2018.08.13
+ * Copyright 2018 Anthony Provenza
+ * ALL RIGHTS RESERVED
+*/
+/* Color Scheme */
+/* todo: Create color scheme */
+/* Reset */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none; }
+
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+body {
+  font-family: sans-serif;
+  color: rgba(0, 0, 0, 0.87); }
+
+a:hover, button:hover {
+  cursor: pointer; }
+
+/* Menu */
+nav.ruby {
+  height: 50px;
+  border: 1px solid rgba(34, 36, 38, 0.15);
+  border-radius: 4px; }
+  nav.ruby:not(.no-shadow) {
+    box-shadow: 0px 1px 2px 0 rgba(34, 36, 38, 0.15); }
+
+nav.ruby > *.header {
+  font-weight: 700; }
+nav.ruby > *:not(.right) {
+  float: left;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 1.2em;
+  border: 0px solid rgba(34, 36, 38, 0.15);
+  background-color: #fff; }
+  nav.ruby > *:not(.right).active {
+    background-color: #f0f0f0; }
+  nav.ruby > *:not(.right):not(div):not(span):not(.header):not(.active):hover {
+    background-color: #f7f7f7; }
+  nav.ruby > *:not(.right).red {
+    color: #DB2828; }
+  nav.ruby > *:not(.right).orange {
+    color: #F2711C; }
+  nav.ruby > *:not(.right).yellow {
+    color: #FBBD08; }
+  nav.ruby > *:not(.right).olive {
+    color: #8D9E13; }
+  nav.ruby > *:not(.right).green {
+    color: #21bA45; }
+  nav.ruby > *:not(.right).teal {
+    color: #00B5AD; }
+  nav.ruby > *:not(.right).blue {
+    color: #2185D0; }
+  nav.ruby > *:not(.right).violet {
+    color: #6435C9; }
+  nav.ruby > *:not(.right).purple {
+    color: #A333C8; }
+  nav.ruby > *:not(.right).pink {
+    color: #E03997; }
+  nav.ruby > *:not(.right).brown {
+    color: #A5673F; }
+  nav.ruby > *:not(.right).grey {
+    color: #767676; }
+  nav.ruby > *:not(.right):not(.no-border):not(:first-child) {
+    border-left-width: 1px; }
+  nav.ruby > *:not(.right):not(.no-border):last-of-type {
+    border-right-width: 1px; }
+nav.ruby > *.right {
+  float: right; }
+nav.ruby > *.right > * {
+  float: left;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 1.2em;
+  border: 0px solid rgba(34, 36, 38, 0.15);
+  background-color: #fff; }
+  nav.ruby > *.right > *.active {
+    background-color: #f0f0f0; }
+  nav.ruby > *.right > *:not(div):not(span):not(.header):not(.active):hover {
+    background-color: #f7f7f7; }
+  nav.ruby > *.right > *.red {
+    color: #DB2828; }
+  nav.ruby > *.right > *.orange {
+    color: #F2711C; }
+  nav.ruby > *.right > *.yellow {
+    color: #FBBD08; }
+  nav.ruby > *.right > *.olive {
+    color: #8D9E13; }
+  nav.ruby > *.right > *.green {
+    color: #21bA45; }
+  nav.ruby > *.right > *.teal {
+    color: #00B5AD; }
+  nav.ruby > *.right > *.blue {
+    color: #2185D0; }
+  nav.ruby > *.right > *.violet {
+    color: #6435C9; }
+  nav.ruby > *.right > *.purple {
+    color: #A333C8; }
+  nav.ruby > *.right > *.pink {
+    color: #E03997; }
+  nav.ruby > *.right > *.brown {
+    color: #A5673F; }
+  nav.ruby > *.right > *.grey {
+    color: #767676; }
+  nav.ruby > *.right > *:not(.no-border):first-child {
+    border-left-width: 1px; }
+  nav.ruby > *.right > *:not(.no-border):not(last-child) {
+    border-right-width: 1px; }
+
+/* Buttons */
+button.ruby {
+  padding: 0.8em 1.5em;
+  color: rgba(0, 0, 0, 0.6);
+  background-color: #e0e1e2;
+  border-radius: 0.3em;
+  outline: none;
+  border-width: 0;
+  font-weight: 700; }
+
+/*# sourceMappingURL=style.css.map */
