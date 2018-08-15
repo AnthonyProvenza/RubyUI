@@ -1,0 +1,438 @@
+/*
+ * Ruby UI Version 2018.08.13
+ * Copyright 2018 Anthony Provenza
+ * ALL RIGHTS RESERVED
+*/
+/* Color Scheme */
+/* todo: Create color scheme */
+/* Reset */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none;
+}
+
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  font-family: sans-serif;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+a:hover, button:hover {
+  cursor: pointer;
+}
+
+/* Redo the headers */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+/* Menu */
+nav.ruby {
+  height: 50px;
+  background-color: #fff;
+  border: 1px solid rgba(34, 36, 38, 0.15);
+  border-radius: 4px;
+}
+nav.ruby.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  min-width: 100%;
+}
+nav.ruby:not(.no-shadow) {
+  box-shadow: 0px 1px 2px 0 rgba(34, 36, 38, 0.15);
+}
+
+nav.ruby > *.header {
+  font-weight: 700;
+}
+nav.ruby > *:not(.right) {
+  float: left;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 1.2em;
+  border: 0px solid rgba(34, 36, 38, 0.15);
+  background-color: #fff;
+}
+nav.ruby > *:not(.right).logo > img {
+  display: block;
+  object-fit: cover;
+  max-width: 230px;
+  max-height: 30px;
+  padding: 10px 0;
+  width: auto;
+  height: auto;
+}
+nav.ruby > *:not(.right).active {
+  background-color: #f0f0f0;
+}
+nav.ruby > *:not(.right):not(div):not(span):not(.header):not(.logo):not(.active):hover {
+  background-color: #f7f7f7;
+}
+nav.ruby > *:not(.right).red {
+  color: #DB2828;
+}
+nav.ruby > *:not(.right).orange {
+  color: #F2711C;
+}
+nav.ruby > *:not(.right).yellow {
+  color: #FBBD08;
+}
+nav.ruby > *:not(.right).olive {
+  color: #8D9E13;
+}
+nav.ruby > *:not(.right).green {
+  color: #21bA45;
+}
+nav.ruby > *:not(.right).teal {
+  color: #00B5AD;
+}
+nav.ruby > *:not(.right).blue {
+  color: #2185D0;
+}
+nav.ruby > *:not(.right).violet {
+  color: #6435C9;
+}
+nav.ruby > *:not(.right).purple {
+  color: #A333C8;
+}
+nav.ruby > *:not(.right).pink {
+  color: #E03997;
+}
+nav.ruby > *:not(.right).brown {
+  color: #A5673F;
+}
+nav.ruby > *:not(.right).grey {
+  color: #767676;
+}
+nav.ruby > *:not(.right):not(.no-border):not(:first-child) {
+  border-left-width: 1px;
+}
+nav.ruby > *:not(.right):not(.no-border):last-of-type {
+  border-right-width: 1px;
+}
+nav.ruby > *.right {
+  float: right;
+}
+nav.ruby > *.right > * {
+  float: left;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 1.2em;
+  border: 0px solid rgba(34, 36, 38, 0.15);
+  background-color: #fff;
+}
+nav.ruby > *.right > *.logo > img {
+  display: block;
+  object-fit: cover;
+  max-width: 230px;
+  max-height: 30px;
+  padding: 10px 0;
+  width: auto;
+  height: auto;
+}
+nav.ruby > *.right > *.active {
+  background-color: #f0f0f0;
+}
+nav.ruby > *.right > *:not(div):not(span):not(.header):not(.logo):not(.active):hover {
+  background-color: #f7f7f7;
+}
+nav.ruby > *.right > *.red {
+  color: #DB2828;
+}
+nav.ruby > *.right > *.orange {
+  color: #F2711C;
+}
+nav.ruby > *.right > *.yellow {
+  color: #FBBD08;
+}
+nav.ruby > *.right > *.olive {
+  color: #8D9E13;
+}
+nav.ruby > *.right > *.green {
+  color: #21bA45;
+}
+nav.ruby > *.right > *.teal {
+  color: #00B5AD;
+}
+nav.ruby > *.right > *.blue {
+  color: #2185D0;
+}
+nav.ruby > *.right > *.violet {
+  color: #6435C9;
+}
+nav.ruby > *.right > *.purple {
+  color: #A333C8;
+}
+nav.ruby > *.right > *.pink {
+  color: #E03997;
+}
+nav.ruby > *.right > *.brown {
+  color: #A5673F;
+}
+nav.ruby > *.right > *.grey {
+  color: #767676;
+}
+nav.ruby > *.right > *:not(.no-border):first-child {
+  border-left-width: 1px;
+}
+nav.ruby > *.right > *:not(.no-border):not(last-child) {
+  border-right-width: 1px;
+}
+
+/* Buttons */
+button.ruby {
+  padding: 0.8em 1.5em;
+  color: rgba(0, 0, 0, 0.6);
+  background-color: #e0e1e2;
+  border-radius: 0.3em;
+  outline: none;
+  border-width: 0;
+  font-weight: 700;
+}
+button.ruby:hover {
+  background-color: #d0d2d3;
+}
+button.ruby:active {
+  background-color: #c6c8c9;
+}
+button.ruby.red {
+  background-color: #DB2828;
+  color: #fff;
+}
+button.ruby.red:hover {
+  background-color: #c42121;
+}
+button.ruby.red:active {
+  background-color: #b21e1e;
+}
+button.ruby.orange {
+  background-color: #F2711C;
+  color: #fff;
+}
+button.ruby.orange:hover {
+  background-color: #e2620d;
+}
+button.ruby.orange:active {
+  background-color: #cf590c;
+}
+button.ruby.yellow {
+  background-color: #FBBD08;
+  color: #fff;
+}
+button.ruby.yellow:hover {
+  background-color: #e1a804;
+}
+button.ruby.yellow:active {
+  background-color: #cd9903;
+}
+button.ruby.olive {
+  background-color: #8D9E13;
+  color: #fff;
+}
+button.ruby.olive:hover {
+  background-color: #758310;
+}
+button.ruby.olive:active {
+  background-color: #64700e;
+}
+button.ruby.green {
+  background-color: #21bA45;
+  color: #fff;
+}
+button.ruby.green:hover {
+  background-color: #1ca03b;
+}
+button.ruby.green:active {
+  background-color: #198f35;
+}
+button.ruby.teal {
+  background-color: #00B5AD;
+  color: #fff;
+}
+button.ruby.teal:hover {
+  background-color: #009690;
+}
+button.ruby.teal:active {
+  background-color: #00827c;
+}
+button.ruby.blue {
+  background-color: #2185D0;
+  color: #fff;
+}
+button.ruby.blue:hover {
+  background-color: #1d74b6;
+}
+button.ruby.blue:active {
+  background-color: #1a69a4;
+}
+button.ruby.violet {
+  background-color: #6435C9;
+  color: #fff;
+}
+button.ruby.violet:hover {
+  background-color: #582fb1;
+}
+button.ruby.violet:active {
+  background-color: #502aa1;
+}
+button.ruby.purple {
+  background-color: #A333C8;
+  color: #fff;
+}
+button.ruby.purple:hover {
+  background-color: #8f2db0;
+}
+button.ruby.purple:active {
+  background-color: #82299f;
+}
+button.ruby.pink {
+  background-color: #E03997;
+  color: #fff;
+}
+button.ruby.pink:hover {
+  background-color: #d92289;
+}
+button.ruby.pink:active {
+  background-color: #c71f7e;
+}
+button.ruby.brown {
+  background-color: #A5673F;
+  color: #fff;
+}
+button.ruby.brown:hover {
+  background-color: #8f5937;
+}
+button.ruby.brown:active {
+  background-color: #805031;
+}
+button.ruby.grey {
+  background-color: #767676;
+  color: #fff;
+}
+button.ruby.grey:hover {
+  background-color: #676767;
+}
+button.ruby.grey:active {
+  background-color: #5d5d5d;
+}
+button.ruby.inverted {
+  padding: calc(0.8em - 2px) calc(1.5em - 2px);
+  border: 2px solid #fff;
+  /* Just using #fff as a default color, as it overwritten later */
+  background-color: #fff;
+}
+button.ruby.inverted.red {
+  color: #DB2828;
+  border-color: #DB2828;
+}
+button.ruby.inverted.red:hover {
+  background-color: #DB2828;
+  color: #fff;
+}
+button.ruby.inverted.red:active {
+  background-color: #b21e1e;
+  border-color: #b21e1e;
+}
+button.ruby.inverted.orange {
+  color: #F2711C;
+  border-color: #F2711C;
+}
+button.ruby.inverted.orange:hover {
+  background-color: #F2711C;
+  color: #fff;
+}
+button.ruby.inverted.orange:active {
+  background-color: #b21e1e;
+  border-color: #cf590c;
+}
+button.ruby.inverted.yellow {
+  color: #FBBD08;
+  border-color: #FBBD08;
+}
+button.ruby.inverted.yellow:hover {
+  background-color: #FBBD08;
+  color: #fff;
+}
+button.ruby.inverted.yellow:active {
+  background-color: #cd9903;
+  border-color: #cd9903;
+}
+button.ruby.inverted.olive {
+  color: #8D9E13;
+  border-color: #8D9E13;
+}
+button.ruby.inverted.olive:hover {
+  background-color: #8D9E13;
+  color: #fff;
+}
+button.ruby.inverted.olive:active {
+  background-color: #64700e;
+  border-color: #64700e;
+}
+button.ruby.inverted.green {
+  background-color: #21bA45;
+  color: #fff;
+}
+button.ruby.inverted.green:hover {
+  background-color: #1ca03b;
+}
+button.ruby.inverted.green:active {
+  background-color: #198f35;
+}
+button.ruby.inverted.teal {
+  background-color: #00B5AD;
+  color: #fff;
+}
+button.ruby.inverted.teal:hover {
+  background-color: #009690;
+}
+button.ruby.inverted.teal:active {
+  background-color: #00827c;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<!--
+    If you're reading this, then you're a nerd
+-->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Ruby UI - The frontend framework of the future">
+        <meta name="keywords" content="CSS,framework,responsive">
+        <meta name="author" content="Anthony Provenza">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Ruby UI - The frontend framework of the future</title>
+
+        <link rel="icon" href="media/images/logos/ruby_logo_solo.png">
+        <link rel="stylesheet" href="output/style.css" type="text/css">
+        
+        <style>
+            /*
+             * These are some styles used in the documentation page only
+             * They were originally written in pure CSS instead of being written in SCSS and being converted, so it might look a bit different
+             * These were only written for this page, so they might not work so well on others. Feel free to try anyway
+            */
+            div.documentation.container {
+                min-width: 100%;
+                max-width: 100;
+                /* padding: calc(50px + 1rem) 1rem 1rem 1rem;*/
+                padding: 1rem;
+                box-sizing: border-box;
+                /* padding-top: calc50px; This is to accompany for the 50px high navbar */
+            }
+
+            div.landing.parallax {
+                z-index: -10;
+                width: 100vw;
+                height: 100vh;
+                top: 0;
+                left: 0;
+                position: fixed;
+            }
+
+            div.landing.parallax > .parallax.image {
+                width: 100%;
+                height: 100%;
+                background: url("media/images/backgrounds/background_01_800.jpg") no-repeat center center fixed; 
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover;
+                -webkit-filter: blur(3px);
+                -moz-filter:    blur(3px);
+                -o-filter:      blur(3px);
+                -ms-filter:     blur(3px);
+                filter:         blur(3px);
+            }
+
+            div.landing.parallax > h1.main.heading {
+                font-size: 4em;
+            }
+            div.landing.parallax > h2.sub.heading, div.landing.parallax > h2.subheading {
+                font-size: 2em;
+            }
+
+            .parallax.spacer {
+                padding-top: 100vh;
+                /* height: 1px; */
+            }
+
+            .after.parallax {
+                background-color: #fff;
+                /* margin-top: 100vh; */
+                min-height: 100vh;
+                /* padding-top: 50px; */
+            }
+        </style>
+
+    </head>
+    <body>
+        <nav class="ruby fixed">
+            <a class="logo">
+                <img src="media/images/logos/ruby_logo_text.png">
+            </a>
+            <!-- <a class="active">Test Item One</a>
+            <a>Item Two</a> -->
+
+            <div class="right">
+                <div class="no-border">
+                    <button class="ruby inverted red">Read the docs</button>
+                </div>
+                <div class="no-border">
+                    <button class="ruby inverted red">Download Now!</button>
+                </div>
+            </div>
+        </nav>
+
+        <div class="landing parallax">
+            <div class="parallax image"></div>
+        </div>
+
+        <div class="parallax spacer"></div>
+        <div class="after parallax">
+            <div class="documentation container">
+                <section>
+                    <h1>Hello World!</h1>
+                </section>
+            </div>
+        </div>
+
+    </body>
+</html>
